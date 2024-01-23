@@ -85,10 +85,10 @@
 					const geometry = new THREE.ShapeGeometry( shapes );
 					geometry.computeBoundingBox();
 					const xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
-					geometry.translate( xMid, 0, -2000 );
+					geometry.translate( xMid, 0, 0 );
 					// make shape ( N.B. edge view not visible )
 					const text = new THREE.Mesh( geometry, matLite );
-					//text.position.z = -100;
+					text.position.z = -10000;
 					scene.add( text );
 					// make line shape ( N.B. edge view remains visible )
 					/*
