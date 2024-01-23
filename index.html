@@ -19,7 +19,6 @@
 
 		<script type="module">
 			import * as THREE from 'three';
-			//import { StereoEffect } from 'three/addons/effects/StereoEffect.js';
 			let container, camera, scene, renderer, effect;
 			const spheres = [];
 			let mouseX = 0, mouseY = 0;
@@ -45,7 +44,7 @@
 					.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ] );
 				textureCube.mapping = THREE.CubeRefractionMapping;
 				const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95 } );
-				for ( let i = 0; i < 500; i ++ ) {
+				for ( let i = 0; i < 10; i ++ ) {
 					const mesh = new THREE.Mesh( geometry, material );
 					mesh.position.x = Math.random() * 10000 - 5000;
 					mesh.position.y = Math.random() * 10000 - 5000;
@@ -59,9 +58,6 @@
 				renderer.setPixelRatio( window.devicePixelRatio );
 				container.appendChild( renderer.domElement );
 				renderer.setSize( window.innerWidth, window.innerHeight );
-				//effect = new StereoEffect( renderer );
-				//effect.setSize( window.innerWidth, window.innerHeight );
-				//
 				window.addEventListener( 'resize', onWindowResize );
 			}
 
@@ -70,7 +66,7 @@
 				windowHalfY = window.innerHeight / 2;
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				//effect.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
 
 			function onDocumentMouseMove( event ) {
@@ -95,7 +91,6 @@
 					sphere.position.x = 5000 * Math.cos( timer + i );
 					sphere.position.y = 5000 * Math.sin( timer + i * 1.1 );
 				}
-				//effect.render( scene, camera );
 				renderer.render( scene, camera );
 			}
 			
