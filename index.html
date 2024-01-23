@@ -58,6 +58,7 @@
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				container.appendChild( renderer.domElement );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 				//effect = new StereoEffect( renderer );
 				//effect.setSize( window.innerWidth, window.innerHeight );
 				//
