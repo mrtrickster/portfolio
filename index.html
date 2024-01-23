@@ -35,13 +35,13 @@
 				camera.position.z = 3200;
 				scene = new THREE.Scene();
 				scene.background = new THREE.CubeTextureLoader()
-					.setPath( 'textures/cube/Park3Med/' )
-					.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ] );
+					.setPath( 'textures/cube/' )
+					.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.png' ] );
 
 				const geometry = new THREE.SphereGeometry( 100, 32, 16 );
 				const textureCube = new THREE.CubeTextureLoader()
-					.setPath( 'textures/cube/Park3Med/' )
-					.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg' ] );
+					.setPath( 'textures/cube/' )
+					.load( [ 'px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.png' ] );
 				textureCube.mapping = THREE.CubeRefractionMapping;
 				const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95 } );
 				for ( let i = 0; i < 10; i ++ ) {
