@@ -81,14 +81,14 @@
 						side: THREE.DoubleSide
 					} );
 					const message = 'MrTrickster';
-					const shapes = font.generateShapes( message, 2000 );
+					const shapes = font.generateShapes( message, 3000 );
 					const geometry = new THREE.ShapeGeometry( shapes );
 					geometry.computeBoundingBox();
 					const xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
 					geometry.translate( xMid, 0, 0 );
 					// make shape ( N.B. edge view not visible )
 					const text = new THREE.Mesh( geometry, matLite );
-					text.position.z = -20000;
+					text.position.z = -30000;
 					scene.add( text );
 					// make line shape ( N.B. edge view remains visible )
 					/*
