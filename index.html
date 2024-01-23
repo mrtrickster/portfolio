@@ -88,7 +88,7 @@
 				const timer = 0.0001 * Date.now();
 				camera.position.x += ( mouseX - camera.position.x ) * .05;
 				camera.position.y += ( - mouseY - camera.position.y ) * .05;
-				camera.lookAt( scene.position );
+				//camera.lookAt( scene.position );
 				for ( let i = 0, il = spheres.length; i < il; i ++ ) {
 					const sphere = spheres[ i ];
 					sphere.position.x = 5000 * Math.cos( timer + i );
@@ -99,6 +99,5 @@
 			}
 
 		</script>
-
 	</body>
 </html>
