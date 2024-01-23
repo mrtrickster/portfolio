@@ -36,11 +36,11 @@
 				scene = new THREE.Scene();
 				scene.background = new THREE.CubeTextureLoader()
 					.setPath( 'textures/cube/' )
-					.load( [ 'px.png', 'nx.png', 'py.jpg', 'ny.png', 'pz.jpg', 'nz.png' ] );
+					.load( [ 'px.png', 'nx.png', 'py.png', 'ny.png', 'pz.jpg', 'nz.png' ] );
 
 				const textureCube = new THREE.CubeTextureLoader()
 					.setPath( 'textures/cube/' )
-					.load( [ 'px.png', 'nx.png', 'py.jpg', 'ny.png', 'pz.jpg', 'nz.png' ] );
+					.load( [ 'px.png', 'nx.png', 'py.png', 'ny.png', 'pz.jpg', 'nz.png' ] );
 				textureCube.mapping = THREE.CubeRefractionMapping;
 				
 				const geometry = new THREE.SphereGeometry( 100, 32, 16 );
