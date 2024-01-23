@@ -69,7 +69,7 @@
 			function displayText() {
 				const loader = new FontLoader();
 				loader.load( 'fonts/inter_thin.typeface.json', function ( font ) {
-					const color = 0x006699;
+					const color = 0xffffff;
 					const matDark = new THREE.LineBasicMaterial( {
 						color: color,
 						side: THREE.DoubleSide
@@ -88,7 +88,7 @@
 					geometry.translate( xMid, 0, 0 );
 					// make shape ( N.B. edge view not visible )
 					const text = new THREE.Mesh( geometry, matLite );
-					text.position.z = - 150;
+					text.position.z = - 1500;
 					scene.add( text );
 					// make line shape ( N.B. edge view remains visible )
 					const holeShapes = [];
