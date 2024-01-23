@@ -49,9 +49,9 @@
 				const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95 } );
 				for ( let i = 0; i < 100; i ++ ) {
 					const mesh = new THREE.Mesh( geometry, material );
-					mesh.position.x = Math.random() * 10000 - 5000;
-					mesh.position.y = Math.random() * 10000 - 5000;
-					mesh.position.z = Math.random() * 10000 - 5000;
+					mesh.position.x = Math.random() * 100000 - 50000;
+					mesh.position.y = Math.random() * 100000 - 50000;
+					mesh.position.z = Math.random() * 100000 - 50000;
 					mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 3 + 2;
 					scene.add( mesh );
 					spheres.push( mesh );
